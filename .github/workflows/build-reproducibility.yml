@@ -44,26 +44,7 @@ name: "Build Reproducibility — cdylib wasm artifacts"
 #   • grainlify-contracts (bin + rlib)
 
 on:
-  push:
-    branches: [master, main]
-    paths:
-      - "contracts/**/*.rs"
-      - "contracts/**/*.toml"
-      - "soroban/**/*.rs"
-      - "soroban/**/*.toml"
-      - ".github/workflows/build-reproducibility.yml"
-      - "scripts/verify-wasm-artifacts.sh"
-  pull_request:
-    branches: [master, main]
-    paths:
-      - "contracts/**/*.rs"
-      - "contracts/**/*.toml"
-      - "soroban/**/*.rs"
-      - "soroban/**/*.toml"
-      - ".github/workflows/build-reproducibility.yml"
-      - "scripts/verify-wasm-artifacts.sh"
   workflow_dispatch:
-
 env:
   CARGO_TERM_COLOR: always
   CARGO_INCREMENTAL: "0"
